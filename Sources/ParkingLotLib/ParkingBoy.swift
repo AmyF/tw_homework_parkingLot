@@ -1,50 +1,42 @@
 
-import Foundation
-
 public enum ParkingBoyError: Error, Equatable {
     case allIsFull
     case noCar
     case invalidTicket
+    case unavailableParkingLot
 }
 
-public class ParkingBoy {
-    private let parkingLots: [ParkingLot]
+public class ParkingBoy: AutomobileHub {
+    public let parkingLots: [ParkingLot]
+    public var strategy: ParkingBoyStrategy = RegularParkingBoyStrategy() {
+        didSet {
+            strategy.input(context: parkingLots)
+        }
+    }
     
     public init(parkingLots: [ParkingLot]) {
         self.parkingLots = parkingLots
+        
+        strategy.input(context: parkingLots)
     }
     
     public func park(_ car: Car) throws -> Ticket {
-        for parkingLot in parkingLots {
-            do {
-                return try parkingLot.park(car)
-            } catch {
-                continue
-            }
-        }
-        throw ParkingBoyError.allIsFull
+        try strategy.park(car)
     }
     
     public func pickUp(_ ticket: Ticket) throws -> Car {
-        try checkTicket(ticket)
-        let parkingLot = try findParkingLot(with: ticket)
-        return try parkingLot.pickUp(ticket)
+        return try strategy.pickUp(ticket)
     }
     
-    func checkTicket(_ ticket: Ticket) throws {
-        for parkingLot in parkingLots {
-            if parkingLot.contains(ticket) {
-                return
-            }
-        }
-        throw ParkingBoyError.invalidTicket
+    public func contains(_ ticket: Ticket) -> Bool {
+        parkingLots.contains(where: {$0.contains(ticket)})
     }
     
-    func findParkingLot(with ticket: Ticket) throws -> ParkingLot {
-        guard let parkingLot = parkingLots.filter({ $0.contains(ticket) }).first else {
-            throw ParkingBoyError.noCar
-        }
-        return parkingLot
+    public func isFull() -> Bool {
+        parkingLots.reduce(true, { $0 && $1.isFull()})
     }
     
+    public func freeSize() -> Int {
+        parkingLots.reduce(0, { $0 + $1.freeSize()})
+    }
 }

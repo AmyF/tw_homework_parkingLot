@@ -21,11 +21,16 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		2B7569D02395531B008B0522 /* AutomobileHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7569CF2395531B008B0522 /* AutomobileHub.swift */; };
+		2B7569D22395599C008B0522 /* ParkingBoyStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7569D12395599C008B0522 /* ParkingBoyStrategy.swift */; };
+		2B7569D623956E8B008B0522 /* RegularParkingBoyStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7569D523956E8B008B0522 /* RegularParkingBoyStrategy.swift */; };
+		2B7569DC23957743008B0522 /* SmartParkingBoyStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7569D7239571D1008B0522 /* SmartParkingBoyStrategy.swift */; };
+		2B7569DD23957755008B0522 /* SmartParkingBoyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7569D9239576A5008B0522 /* SmartParkingBoyTests.swift */; };
 		2BBE33292394ABEE006A9451 /* ParkingLot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBE33272394ABEA006A9451 /* ParkingLot.swift */; };
 		2BBE332B2394ABFC006A9451 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBE332A2394ABFC006A9451 /* Car.swift */; };
 		2BBE332D2394AC06006A9451 /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBE332C2394AC06006A9451 /* Ticket.swift */; };
 		2BBE332F2394BDDA006A9451 /* ParkingBoy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBE332E2394BDDA006A9451 /* ParkingBoy.swift */; };
-		2BBE33312394C163006A9451 /* ParkingBoyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBE33302394C163006A9451 /* ParkingBoyTests.swift */; };
+		2BBE33312394C163006A9451 /* RegularParkingBoyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBE33302394C163006A9451 /* RegularParkingBoyTests.swift */; };
 		OBJ_27 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* main.swift */; };
 		OBJ_29 /* ParkingLotLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "ParkingLot::ParkingLotLib::Product" /* ParkingLotLib.framework */; };
 		OBJ_43 /* ParkingLotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* ParkingLotTests.swift */; };
@@ -59,11 +64,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2B7569CF2395531B008B0522 /* AutomobileHub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomobileHub.swift; sourceTree = "<group>"; };
+		2B7569D12395599C008B0522 /* ParkingBoyStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingBoyStrategy.swift; sourceTree = "<group>"; };
+		2B7569D523956E8B008B0522 /* RegularParkingBoyStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularParkingBoyStrategy.swift; sourceTree = "<group>"; };
+		2B7569D7239571D1008B0522 /* SmartParkingBoyStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartParkingBoyStrategy.swift; sourceTree = "<group>"; };
+		2B7569D9239576A5008B0522 /* SmartParkingBoyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartParkingBoyTests.swift; sourceTree = "<group>"; };
 		2BBE33272394ABEA006A9451 /* ParkingLot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkingLot.swift; sourceTree = "<group>"; };
 		2BBE332A2394ABFC006A9451 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		2BBE332C2394AC06006A9451 /* Ticket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
 		2BBE332E2394BDDA006A9451 /* ParkingBoy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingBoy.swift; sourceTree = "<group>"; };
-		2BBE33302394C163006A9451 /* ParkingBoyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingBoyTests.swift; sourceTree = "<group>"; };
+		2BBE33302394C163006A9451 /* RegularParkingBoyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularParkingBoyTests.swift; sourceTree = "<group>"; };
 		OBJ_15 /* ParkingLotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingLotTests.swift; sourceTree = "<group>"; };
 		OBJ_16 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
 		OBJ_21 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -104,7 +114,11 @@
 		OBJ_10 /* ParkingLotLib */ = {
 			isa = PBXGroup;
 			children = (
+				2B7569CF2395531B008B0522 /* AutomobileHub.swift */,
 				2BBE33272394ABEA006A9451 /* ParkingLot.swift */,
+				2B7569D12395599C008B0522 /* ParkingBoyStrategy.swift */,
+				2B7569D523956E8B008B0522 /* RegularParkingBoyStrategy.swift */,
+				2B7569D7239571D1008B0522 /* SmartParkingBoyStrategy.swift */,
 				2BBE332E2394BDDA006A9451 /* ParkingBoy.swift */,
 				2BBE332A2394ABFC006A9451 /* Car.swift */,
 				2BBE332C2394AC06006A9451 /* Ticket.swift */,
@@ -125,7 +139,8 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_15 /* ParkingLotTests.swift */,
-				2BBE33302394C163006A9451 /* ParkingBoyTests.swift */,
+				2BBE33302394C163006A9451 /* RegularParkingBoyTests.swift */,
+				2B7569D9239576A5008B0522 /* SmartParkingBoyTests.swift */,
 				OBJ_16 /* XCTestManifests.swift */,
 			);
 			name = ParkingLotLibTests;
@@ -142,7 +157,7 @@
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -151,7 +166,6 @@
 				OBJ_17 /* Products */,
 				OBJ_21 /* README.md */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_7 /* Sources */ = {
@@ -255,7 +269,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_17 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -284,7 +298,11 @@
 			files = (
 				2BBE332B2394ABFC006A9451 /* Car.swift in Sources */,
 				2BBE332F2394BDDA006A9451 /* ParkingBoy.swift in Sources */,
+				2B7569DC23957743008B0522 /* SmartParkingBoyStrategy.swift in Sources */,
+				2B7569D22395599C008B0522 /* ParkingBoyStrategy.swift in Sources */,
 				2BBE332D2394AC06006A9451 /* Ticket.swift in Sources */,
+				2B7569D623956E8B008B0522 /* RegularParkingBoyStrategy.swift in Sources */,
+				2B7569D02395531B008B0522 /* AutomobileHub.swift in Sources */,
 				2BBE33292394ABEE006A9451 /* ParkingLot.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,8 +312,9 @@
 			buildActionMask = 0;
 			files = (
 				OBJ_43 /* ParkingLotTests.swift in Sources */,
+				2B7569DD23957755008B0522 /* SmartParkingBoyTests.swift in Sources */,
 				OBJ_44 /* XCTestManifests.swift in Sources */,
-				2BBE33312394C163006A9451 /* ParkingBoyTests.swift in Sources */,
+				2BBE33312394C163006A9451 /* RegularParkingBoyTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

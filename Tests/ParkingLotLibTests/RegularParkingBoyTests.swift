@@ -2,7 +2,7 @@
 import XCTest
 @testable import ParkingLotLib
 
-final class ParkingBoyTests: XCTestCase {
+final class RegularParkingBoyTests: XCTestCase {
     var testAParkingLot: ParkingLot!
     var testBParkingLot: ParkingLot!
     var testParkingBoy: ParkingBoy!
@@ -36,11 +36,11 @@ final class ParkingBoyTests: XCTestCase {
         _ = try? testParkingBoy.park(makeNewCar())
         
         // when
-        let ticket = try? testParkingBoy.park(makeNewCar())
+        let ticket = try! testParkingBoy.park(makeNewCar())
         
         // then
         XCTAssertNotNil(ticket)
-        XCTAssertTrue(testBParkingLot.contains(ticket!))
+        XCTAssertNoThrow(try testBParkingLot.pickUp(ticket))
     }
     
     func test_should_return_exception_when_park_a_car_in_all_full_parking_lot() {
@@ -58,22 +58,22 @@ final class ParkingBoyTests: XCTestCase {
         }
     }
     
-    func test_should_return_the_car_when_use_ticket_to_pick_up_in_parking_lot() throws {
+    func test_should_return_the_car_when_use_ticket_to_pick_up_in_parking_lot() {
         // given
         let parkedCar = makeNewCar()
-        let ticket = try testParkingBoy.park(parkedCar)
+        let ticket = try! testParkingBoy.park(parkedCar)
         
         // when
-        let pickedCar = try testParkingBoy.pickUp(ticket)
+        let pickedCar = try! testParkingBoy.pickUp(ticket)
         
         // then
         XCTAssertEqual(pickedCar, parkedCar)
     }
     
-    func test_should_throw_exception_when_use_fake_ticket_to_pick_up_in_parking_lot() throws {
+    func test_should_throw_exception_when_use_fake_ticket_to_pick_up_in_parking_lot() {
         // given
         let parkedCar = makeNewCar()
-        _ = try testParkingBoy.park(parkedCar)
+        _ = try! testParkingBoy.park(parkedCar)
         
         // when
         let ticket = Ticket(id: UUID(), parkingLotID: UUID())
@@ -84,7 +84,7 @@ final class ParkingBoyTests: XCTestCase {
         }
     }
     
-    func test_should_throw_exception_when_use_fake_ticket_to_pick_up_in_clear_parking_lot() throws {
+    func test_should_throw_exception_when_use_fake_ticket_to_pick_up_in_clear_parking_lot() {
         // given
         let ticket = Ticket(id: UUID(), parkingLotID: UUID())
         
@@ -96,13 +96,13 @@ final class ParkingBoyTests: XCTestCase {
         }
     }
     
-    func test_should_throw_exception_when_use_same_ticket_to_pick_car_in_same_parking_lot() throws {
+    func test_should_throw_exception_when_use_same_ticket_to_pick_car_in_same_parking_lot() {
         // given
         let car = makeNewCar()
-        let ticket = try testParkingBoy.park(car)
+        let ticket = try! testParkingBoy.park(car)
         
         // when
-        _ = try testParkingBoy.pickUp(ticket)
+        _ = try! testParkingBoy.pickUp(ticket)
         
         // then
         XCTAssertThrowsError(try testParkingBoy.pickUp(ticket)) {
@@ -117,7 +117,7 @@ final class ParkingBoyTests: XCTestCase {
     ]
 }
 
-extension ParkingBoyTests {
+extension RegularParkingBoyTests {
     func makeNewCar() -> Car {
         Car(id: UUID())
     }

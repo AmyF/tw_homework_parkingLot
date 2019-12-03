@@ -35,22 +35,22 @@ final class ParkingLotTests: XCTestCase {
         }
     }
     
-    func test_should_return_the_car_when_use_ticket_to_pick_up_in_parking_lot() throws {
+    func test_should_return_the_car_when_use_ticket_to_pick_up_in_parking_lot() {
         // given
         let parkedCar = makeNewCar()
-        let ticket = try testParkingLot.park(parkedCar)
+        let ticket = try! testParkingLot.park(parkedCar)
         
         // when
-        let pickedCar = try testParkingLot.pickUp(ticket)
+        let pickedCar = try! testParkingLot.pickUp(ticket)
         
         // then
         XCTAssertEqual(pickedCar, parkedCar)
     }
     
-    func test_should_throw_exception_when_use_fake_ticket_to_pick_up_in_parking_lot() throws {
+    func test_should_throw_exception_when_use_fake_ticket_to_pick_up_in_parking_lot() {
         // given
         let parkedCar = makeNewCar()
-        _ = try testParkingLot.park(parkedCar)
+        _ = try! testParkingLot.park(parkedCar)
         
         // when
         let ticket = Ticket(id: UUID(), parkingLotID: UUID())
@@ -61,13 +61,13 @@ final class ParkingLotTests: XCTestCase {
         }
     }
     
-    func test_should_throw_exception_when_use_same_ticket_to_pick_car_in_same_parking_lot() throws {
+    func test_should_throw_exception_when_use_same_ticket_to_pick_car_in_same_parking_lot() {
         // given
         let car = makeNewCar()
-        let ticket = try testParkingLot.park(car)
+        let ticket = try! testParkingLot.park(car)
         
         // when
-        _ = try testParkingLot.pickUp(ticket)
+        _ = try! testParkingLot.pickUp(ticket)
         
         // then
         XCTAssertThrowsError(try testParkingLot.pickUp(ticket)) {
@@ -75,10 +75,10 @@ final class ParkingLotTests: XCTestCase {
         }
     }
     
-    func test_should_throw_exception_when_use_same_car_to_park_same_parking_lot() throws {
+    func test_should_throw_exception_when_use_same_car_to_park_same_parking_lot() {
         // given
         let car = makeNewCar()
-        _ = try testParkingLot.park(car)
+        _ = try! testParkingLot.park(car)
         
         // when
         
