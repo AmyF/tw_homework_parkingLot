@@ -7,17 +7,17 @@ public enum ParkingBoyError: Error, Equatable {
 }
 
 public class ParkingBoy: AutomobileHub {
-    public let parkingLots: [ParkingLot]
+    public let hubs: [AutomobileHub]
     public var strategy: ParkingBoyStrategy = RegularParkingBoyStrategy() {
         didSet {
-            strategy.input(context: parkingLots)
+            strategy.input(context: hubs)
         }
     }
     
-    public init(parkingLots: [ParkingLot]) {
-        self.parkingLots = parkingLots
+    public init(hubs: [AutomobileHub]) {
+        self.hubs = hubs
         
-        strategy.input(context: parkingLots)
+        strategy.input(context: hubs)
     }
     
     public func park(_ car: Car) throws -> Ticket {
@@ -29,14 +29,18 @@ public class ParkingBoy: AutomobileHub {
     }
     
     public func contains(_ ticket: Ticket) -> Bool {
-        parkingLots.contains(where: {$0.contains(ticket)})
+        hubs.contains(where: {$0.contains(ticket)})
     }
     
     public func isFull() -> Bool {
-        parkingLots.reduce(true, { $0 && $1.isFull()})
+        hubs.reduce(true, { $0 && $1.isFull()})
     }
     
     public func freeSize() -> Int {
-        parkingLots.reduce(0, { $0 + $1.freeSize()})
+        hubs.reduce(0, { $0 + $1.freeSize()})
+    }
+    
+    public func vacancyRate() -> Float {
+        return 0
     }
 }

@@ -10,7 +10,7 @@ final class RegularParkingBoyTests: XCTestCase {
     override func setUp() {
         testAParkingLot = ParkingLot(id: UUID(), size: 2)
         testBParkingLot = ParkingLot(id: UUID(), size: 2)
-        testParkingBoy = ParkingBoy(parkingLots: [testAParkingLot, testBParkingLot])
+        testParkingBoy = ParkingBoy(hubs: [testAParkingLot, testBParkingLot])
     }
     
     override func tearDown() {

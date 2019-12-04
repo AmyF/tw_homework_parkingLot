@@ -5,6 +5,8 @@ public protocol AutomobileHub: Parkable, Pickable {
     func isFull() -> Bool
     
     func freeSize() -> Int
+    
+    func vacancyRate() -> Float
 }
 
 public protocol Parkable {

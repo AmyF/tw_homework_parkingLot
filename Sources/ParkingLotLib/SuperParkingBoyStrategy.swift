@@ -1,5 +1,5 @@
 
-public class RegularParkingBoyStrategy: ParkingBoyStrategy {
+public class SuperParkingBoyStrategy: ParkingBoyStrategy {
     private(set) var hubs: [AutomobileHub] = []
     
     public func input(context: [AutomobileHub]) {
@@ -15,5 +15,15 @@ public class RegularParkingBoyStrategy: ParkingBoyStrategy {
         try checkTicket(ticket, in: hubs)
         let hub = try findHub(with: ticket, in: hubs)
         return try hub.pickUp(ticket)
+    }
+    
+    func findAvailableHub(in hubs: [AutomobileHub]) throws -> AutomobileHub {
+        guard let target = hubs.max(by: { $0.vacancyRate() < $1.vacancyRate() }) else {
+            throw ParkingBoyError.unavailableParkingLot
+        }
+        guard target.isFull() == false else {
+            throw ParkingBoyError.allIsFull
+        }
+        return target
     }
 }

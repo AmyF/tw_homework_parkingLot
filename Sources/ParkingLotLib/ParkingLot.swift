@@ -55,6 +55,10 @@ public class ParkingLot: AutomobileHub, Identifiable {
         return size - parkingSpot.count
     }
     
+    public func vacancyRate() -> Float {
+        return Float(freeSize()) / Float(size)
+    }
+    
     func isParkedCar(_ car: Car) -> Bool {
         return parkingSpot.contains { (arg) -> Bool in
             let (_, parkedCar) = arg

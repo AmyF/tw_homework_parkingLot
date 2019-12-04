@@ -1,31 +1,31 @@
 
 public protocol ParkingBoyStrategy: Parkable, Pickable {
-    func input(context: [ParkingLot])
+    func input(context: [AutomobileHub])
 }
 
 extension ParkingBoyStrategy {
-    func findAvailableParkingLot(in parkingLots: [ParkingLot]) throws -> ParkingLot {
-        for parkingLot in parkingLots {
-            if parkingLot.isFull() == false {
-                return parkingLot
+    func findAvailableHub(in hubs: [AutomobileHub]) throws -> AutomobileHub {
+        for hub in hubs {
+            if hub.isFull() == false {
+                return hub
             }
         }
         throw ParkingBoyError.allIsFull
     }
     
-    func checkTicket(_ ticket: Ticket, in parkingLots: [ParkingLot]) throws {
-        for parkingLot in parkingLots {
-            if parkingLot.contains(ticket) {
+    func checkTicket(_ ticket: Ticket, in hubs: [AutomobileHub]) throws {
+        for hub in hubs {
+            if hub.contains(ticket) {
                 return
             }
         }
         throw ParkingBoyError.invalidTicket
     }
     
-    func findParkingLot(with ticket: Ticket, in parkingLots: [ParkingLot]) throws -> ParkingLot {
-        guard let parkingLot = parkingLots.filter({ $0.contains(ticket) }).first else {
+    func findHub(with ticket: Ticket, in hubs: [AutomobileHub]) throws -> AutomobileHub {
+        guard let hub = hubs.filter({ $0.contains(ticket) }).first else {
             throw ParkingBoyError.noCar
         }
-        return parkingLot
+        return hub
     }
 }

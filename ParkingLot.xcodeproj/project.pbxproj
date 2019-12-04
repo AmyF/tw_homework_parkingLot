@@ -26,6 +26,8 @@
 		2B7569D623956E8B008B0522 /* RegularParkingBoyStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7569D523956E8B008B0522 /* RegularParkingBoyStrategy.swift */; };
 		2B7569DC23957743008B0522 /* SmartParkingBoyStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7569D7239571D1008B0522 /* SmartParkingBoyStrategy.swift */; };
 		2B7569DD23957755008B0522 /* SmartParkingBoyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7569D9239576A5008B0522 /* SmartParkingBoyTests.swift */; };
+		2B7569DF23976E41008B0522 /* SuperParkingBoyStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7569DE23976E41008B0522 /* SuperParkingBoyStrategy.swift */; };
+		2B7569E123976F66008B0522 /* SuperParkingBoyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7569E023976F66008B0522 /* SuperParkingBoyTests.swift */; };
 		2BBE33292394ABEE006A9451 /* ParkingLot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBE33272394ABEA006A9451 /* ParkingLot.swift */; };
 		2BBE332B2394ABFC006A9451 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBE332A2394ABFC006A9451 /* Car.swift */; };
 		2BBE332D2394AC06006A9451 /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBE332C2394AC06006A9451 /* Ticket.swift */; };
@@ -69,6 +71,8 @@
 		2B7569D523956E8B008B0522 /* RegularParkingBoyStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularParkingBoyStrategy.swift; sourceTree = "<group>"; };
 		2B7569D7239571D1008B0522 /* SmartParkingBoyStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartParkingBoyStrategy.swift; sourceTree = "<group>"; };
 		2B7569D9239576A5008B0522 /* SmartParkingBoyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartParkingBoyTests.swift; sourceTree = "<group>"; };
+		2B7569DE23976E41008B0522 /* SuperParkingBoyStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperParkingBoyStrategy.swift; sourceTree = "<group>"; };
+		2B7569E023976F66008B0522 /* SuperParkingBoyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperParkingBoyTests.swift; sourceTree = "<group>"; };
 		2BBE33272394ABEA006A9451 /* ParkingLot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkingLot.swift; sourceTree = "<group>"; };
 		2BBE332A2394ABFC006A9451 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		2BBE332C2394AC06006A9451 /* Ticket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
@@ -119,6 +123,7 @@
 				2B7569D12395599C008B0522 /* ParkingBoyStrategy.swift */,
 				2B7569D523956E8B008B0522 /* RegularParkingBoyStrategy.swift */,
 				2B7569D7239571D1008B0522 /* SmartParkingBoyStrategy.swift */,
+				2B7569DE23976E41008B0522 /* SuperParkingBoyStrategy.swift */,
 				2BBE332E2394BDDA006A9451 /* ParkingBoy.swift */,
 				2BBE332A2394ABFC006A9451 /* Car.swift */,
 				2BBE332C2394AC06006A9451 /* Ticket.swift */,
@@ -141,6 +146,7 @@
 				OBJ_15 /* ParkingLotTests.swift */,
 				2BBE33302394C163006A9451 /* RegularParkingBoyTests.swift */,
 				2B7569D9239576A5008B0522 /* SmartParkingBoyTests.swift */,
+				2B7569E023976F66008B0522 /* SuperParkingBoyTests.swift */,
 				OBJ_16 /* XCTestManifests.swift */,
 			);
 			name = ParkingLotLibTests;
@@ -298,6 +304,7 @@
 			files = (
 				2BBE332B2394ABFC006A9451 /* Car.swift in Sources */,
 				2BBE332F2394BDDA006A9451 /* ParkingBoy.swift in Sources */,
+				2B7569DF23976E41008B0522 /* SuperParkingBoyStrategy.swift in Sources */,
 				2B7569DC23957743008B0522 /* SmartParkingBoyStrategy.swift in Sources */,
 				2B7569D22395599C008B0522 /* ParkingBoyStrategy.swift in Sources */,
 				2BBE332D2394AC06006A9451 /* Ticket.swift in Sources */,
@@ -313,6 +320,7 @@
 			files = (
 				OBJ_43 /* ParkingLotTests.swift in Sources */,
 				2B7569DD23957755008B0522 /* SmartParkingBoyTests.swift in Sources */,
+				2B7569E123976F66008B0522 /* SuperParkingBoyTests.swift in Sources */,
 				OBJ_44 /* XCTestManifests.swift in Sources */,
 				2BBE33312394C163006A9451 /* RegularParkingBoyTests.swift in Sources */,
 			);
