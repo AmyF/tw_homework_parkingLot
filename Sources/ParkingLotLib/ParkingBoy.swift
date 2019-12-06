@@ -8,7 +8,7 @@ public enum ParkingBoyError: Error, Equatable {
 
 public class ParkingBoy: AutomobileHub {
     public let hubs: [AutomobileHub]
-    public var strategy: ParkingBoyStrategy = RegularParkingBoyStrategy() {
+    public var strategy: ParkingStrategy = RegularParkingBoyStrategy() {
         didSet {
             strategy.input(context: hubs)
         }
