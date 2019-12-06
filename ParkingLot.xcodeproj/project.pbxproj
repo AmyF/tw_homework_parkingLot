@@ -22,6 +22,7 @@
 
 /* Begin PBXBuildFile section */
 		2B3D9FB2239A1218000CD265 /* ParkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3D9FB1239A1218000CD265 /* ParkingManager.swift */; };
+		2B3D9FB4239A1984000CD265 /* ParkingManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3D9FB3239A1984000CD265 /* ParkingManagerTests.swift */; };
 		2B7569D02395531B008B0522 /* AutomobileHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7569CF2395531B008B0522 /* AutomobileHub.swift */; };
 		2B7569D22395599C008B0522 /* ParkingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7569D12395599C008B0522 /* ParkingStrategy.swift */; };
 		2B7569D623956E8B008B0522 /* RegularParkingBoyStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7569D523956E8B008B0522 /* RegularParkingBoyStrategy.swift */; };
@@ -68,6 +69,7 @@
 
 /* Begin PBXFileReference section */
 		2B3D9FB1239A1218000CD265 /* ParkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingManager.swift; sourceTree = "<group>"; };
+		2B3D9FB3239A1984000CD265 /* ParkingManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingManagerTests.swift; sourceTree = "<group>"; };
 		2B7569CF2395531B008B0522 /* AutomobileHub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomobileHub.swift; sourceTree = "<group>"; };
 		2B7569D12395599C008B0522 /* ParkingStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingStrategy.swift; sourceTree = "<group>"; };
 		2B7569D523956E8B008B0522 /* RegularParkingBoyStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularParkingBoyStrategy.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				2BBE33302394C163006A9451 /* RegularParkingBoyTests.swift */,
 				2B7569D9239576A5008B0522 /* SmartParkingBoyTests.swift */,
 				2B7569E023976F66008B0522 /* SuperParkingBoyTests.swift */,
+				2B3D9FB3239A1984000CD265 /* ParkingManagerTests.swift */,
 				OBJ_16 /* XCTestManifests.swift */,
 			);
 			name = ParkingLotLibTests;
@@ -324,6 +327,7 @@
 			files = (
 				OBJ_43 /* ParkingLotTests.swift in Sources */,
 				2B7569DD23957755008B0522 /* SmartParkingBoyTests.swift in Sources */,
+				2B3D9FB4239A1984000CD265 /* ParkingManagerTests.swift in Sources */,
 				2B7569E123976F66008B0522 /* SuperParkingBoyTests.swift in Sources */,
 				OBJ_44 /* XCTestManifests.swift in Sources */,
 				2BBE33312394C163006A9451 /* RegularParkingBoyTests.swift in Sources */,

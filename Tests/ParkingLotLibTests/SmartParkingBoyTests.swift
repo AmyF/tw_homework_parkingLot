@@ -14,12 +14,12 @@ final class SmartParkingBoyTests: XCTestCase {
     override func setUp() {
         firstParkingLot = ParkingLot(id: UUID(), size: 2)
         secondParkingLot = ParkingLot(id: UUID(), size: 2)
-        firstParkingBoy = ParkingBoy(hubs: [firstParkingLot, secondParkingLot])
+        firstParkingBoy = try! ParkingBoy(hubs: [firstParkingLot, secondParkingLot])
         firstParkingBoy.strategy = SmartParkingBoyStrategy()
         
         thirdParkingLot = ParkingLot(id: UUID(), size: 1)
         fourthParkingLot = ParkingLot(id: UUID(), size: 2)
-        secondParkingBoy = ParkingBoy(hubs: [thirdParkingLot, fourthParkingLot])
+        secondParkingBoy = try! ParkingBoy(hubs: [thirdParkingLot, fourthParkingLot])
         secondParkingBoy.strategy = SmartParkingBoyStrategy()
     }
     

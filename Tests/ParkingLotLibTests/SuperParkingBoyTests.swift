@@ -12,7 +12,7 @@ final class SuperParkingBoyTests: XCTestCase {
         firstParkingLot = ParkingLot(id: UUID(), size: 10)
         secondParkingLot = ParkingLot(id: UUID(), size: 10)
         thirdParkingLot = ParkingLot(id: UUID(), size: 20)
-        parkingBoy = ParkingBoy(hubs: [firstParkingLot, secondParkingLot, thirdParkingLot])
+        parkingBoy = try! ParkingBoy(hubs: [firstParkingLot, secondParkingLot, thirdParkingLot])
         parkingBoy.strategy = SuperParkingBoyStrategy()
     }
     
@@ -40,7 +40,7 @@ final class SuperParkingBoyTests: XCTestCase {
         let firstParkingLot = ParkingLot(id: UUID(), size: 10)
         let secondParkingLot = ParkingLot(id: UUID(), size: 10)
         let thirdParkingLot = ParkingLot(id: UUID(), size: 5)
-        let firstParkingBoy = ParkingBoy(hubs: [firstParkingLot, secondParkingLot, thirdParkingLot])
+        let firstParkingBoy = try! ParkingBoy(hubs: [firstParkingLot, secondParkingLot, thirdParkingLot])
         firstParkingBoy.strategy = SuperParkingBoyStrategy()
         let parkedCar = makeNewCar()
         
@@ -85,7 +85,7 @@ final class SuperParkingBoyTests: XCTestCase {
         let firstParkingLot = ParkingLot(id: UUID(), size: 1)
         let secondParkingLot = ParkingLot(id: UUID(), size: 1)
         let thirdParkingLot = ParkingLot(id: UUID(), size: 2)
-        let firstParkingBoy = ParkingBoy(hubs: [firstParkingLot, secondParkingLot, thirdParkingLot])
+        let firstParkingBoy = try! ParkingBoy(hubs: [firstParkingLot, secondParkingLot, thirdParkingLot])
         firstParkingBoy.strategy = SuperParkingBoyStrategy()
         
         // when

@@ -4,6 +4,7 @@ public enum ParkingBoyError: Error, Equatable {
     case noCar
     case invalidTicket
     case unavailableParkingLot
+    case manageBoy
 }
 
 public class ParkingBoy: AutomobileHub {
@@ -14,7 +15,10 @@ public class ParkingBoy: AutomobileHub {
         }
     }
     
-    public init(hubs: [AutomobileHub]) {
+    public init(hubs: [AutomobileHub]) throws {
+        guard hubs.contains(where: {$0 is ParkingBoy}) == false else {
+            throw ParkingBoyError.manageBoy
+        }
         self.hubs = hubs
         
         strategy.input(context: hubs)
